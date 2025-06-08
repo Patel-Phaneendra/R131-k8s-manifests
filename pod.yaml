@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cart-app-pod
+spec:
+  containers:
+    - name: test-container
+      image: patelphaneendra/sre-capco-test-image:1.0.0   
+      ports:
+        - ContainerPort: 3015
+        
