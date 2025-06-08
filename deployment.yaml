@@ -34,7 +34,7 @@ spec:
   selector:
     app: web
   ports:
-  - port: 3015 #Service port on which you want to access the application
+  - port: 3017 #Service port on which you want to access the application
     targetPort: 3015 #On which port your application is running
     protocol: TCP
   type: LoadBalancer
