@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flower-app-deployment
+spec: # it defines the behaviour of deployment
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template: # It defines Pod definition
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: flower-app-deployment
+        image: patelphaneendra/sre-capco-test-image:1.0.0
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "300m"
+          requests:
+            memory: "128Mi"
+            cpu: "200m"  
+        ports:
+        - containerPort: 3015
