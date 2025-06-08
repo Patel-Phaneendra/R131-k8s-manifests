@@ -7,5 +7,4 @@ spec:
     - name: test-container
       image: patelphaneendra/sre-capco-test-image:1.0.0   
       ports:
-        - ContainerPort: 3015
-        
+        - containerPort: 3015
